@@ -1,11 +1,11 @@
 /**
- * Grok Imagine to OpenClaw Integration
+ * Clawdy Selfie - Grok Imagine to OpenClaw Integration
  *
  * Generates images using xAI's Grok Imagine model via fal.ai
  * and sends them to messaging channels via OpenClaw.
  *
  * Usage:
- *   npx ts-node grok-imagine-send.ts "<prompt>" "<channel>" ["<caption>"]
+ *   npx ts-node clawdy-selfie.ts "<prompt>" "<channel>" ["<caption>"]
  *
  * Environment variables:
  *   FAL_KEY - Your fal.ai API key

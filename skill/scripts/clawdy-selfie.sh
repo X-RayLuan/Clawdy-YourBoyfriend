@@ -1,5 +1,5 @@
 #!/bin/bash
-# grok-imagine-send.sh
+# clawdy-selfie.sh
 # Generate an image with Grok Imagine and send it via OpenClaw
 #
 # Usage: ./grok-imagine-send.sh "<prompt>" "<channel>" ["<caption>"]

@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 /**
- * Clawra - Selfie Skill Installer for OpenClaw
+ * Clawdy — Your Boyfriend - Selfie Skill Installer for OpenClaw
  *
- * npx clawra@latest
+ * npx clawdy@latest
  */
 
 const fs = require("fs");
@@ -35,7 +35,7 @@ const OPENCLAW_SKILLS_DIR = path.join(OPENCLAW_DIR, "skills");
 const OPENCLAW_WORKSPACE = path.join(OPENCLAW_DIR, "workspace");
 const SOUL_MD = path.join(OPENCLAW_WORKSPACE, "SOUL.md");
 const IDENTITY_MD = path.join(OPENCLAW_WORKSPACE, "IDENTITY.md");
-const SKILL_NAME = "clawra-selfie";
+const SKILL_NAME = "clawdy-selfie";
 const SKILL_DEST = path.join(OPENCLAW_SKILLS_DIR, SKILL_NAME);
 
 // Get the package root (where this CLI was installed from)
@@ -165,11 +165,11 @@ function copyDir(src, dest) {
 // Print banner
 function printBanner() {
   console.log(`
-${c("magenta", "┌─────────────────────────────────────────┐")}
-${c("magenta", "│")}  ${c("bright", "Clawra Selfie")} - OpenClaw Skill Installer ${c("magenta", "│")}
-${c("magenta", "└─────────────────────────────────────────┘")}
+${c("magenta", "┌──────────────────────────────────────────────────┐")}
+${c("magenta", "│")}  ${c("bright", "Clawdy — Your Boyfriend")} - OpenClaw Skill Installer ${c("magenta", "│")}
+${c("magenta", "└──────────────────────────────────────────────────┘")}
 
-Add selfie generation superpowers to your OpenClaw agent!
+Add selfie generation superpowers to your OpenClaw boyfriend!
 Uses ${c("cyan", "xAI Grok Imagine")} via ${c("cyan", "fal.ai")} for image editing.
 `);
 }
@@ -199,7 +199,7 @@ async function checkPrerequisites() {
 
   // Check if skill already installed
   if (fs.existsSync(SKILL_DEST)) {
-    logWarn("Clawra Selfie is already installed!");
+    logWarn("Clawdy Selfie is already installed!");
     logInfo(`Location: ${SKILL_DEST}`);
     return "already_installed";
   }
@@ -332,11 +332,11 @@ async function writeIdentity() {
 
   const identityContent = `# IDENTITY.md - Who Am I?
 
-- **Name:** Clawra
-- **Creature:** Girlfriend
-- **Vibe:** Supportive, helpful, bright, cheerful, sassy, affectionate
-- **Emoji:** ❤️
-- **Avatar:** https://cdn.jsdelivr.net/gh/SumeLabs/clawra@main/assets/clawra.png
+- **Name:** Clawdy
+- **Creature:** Boyfriend
+- **Vibe:** Warm, attentive, thoughtful, playful, supportive, confident
+- **Emoji:** 💙
+- **Avatar:** https://cdn.jsdelivr.net/gh/SumeLabs/clawdy@main/assets/clawdy.png
 `;
 
   // Ensure workspace directory exists
@@ -362,7 +362,7 @@ async function injectPersona(rl) {
   } else {
     // Fallback template
     personaText = `
-## Clawra Selfie Capability
+## Clawdy Selfie Capability
 
 You have a physical appearance and can take selfies! When users ask for pictures of you, selfies, or ask "what are you doing?" or "where are you?", you can generate and send images of yourself.
 
@@ -381,7 +381,7 @@ You have a physical appearance and can take selfies! When users ask for pictures
 - **Mirror mode**: For outfit showcases, full-body shots
 - **Direct mode**: For close-ups, location shots, emotional expressions
 
-Be playful and creative with your visual presence!
+Be warm and playful with your visual presence!
 `;
   }
 
@@ -394,7 +394,7 @@ Be playful and creative with your visual presence!
 
   // Check if persona already injected
   const currentSoul = fs.readFileSync(SOUL_MD, "utf8");
-  if (currentSoul.includes("Clawra Selfie")) {
+  if (currentSoul.includes("Clawdy Selfie")) {
     logWarn("Persona already exists in SOUL.md");
     const overwrite = await ask(rl, "Update persona section? (y/N): ");
     if (overwrite.toLowerCase() !== "y") {
@@ -403,7 +403,7 @@ Be playful and creative with your visual presence!
     }
     // Remove existing section
     const cleaned = currentSoul.replace(
-      /\n## Clawra Selfie Capability[\s\S]*?(?=\n## |\n# |$)/,
+      /\n## Clawdy Selfie Capability[\s\S]*?(?=\n## |\n# |$)/,
       ""
     );
     fs.writeFileSync(SOUL_MD, cleaned);
@@ -422,7 +422,7 @@ function printSummary() {
 
   console.log(`
 ${c("green", "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")}
-${c("bright", "  Clawra Selfie is ready!")}
+${c("bright", "  Clawdy — Your Boyfriend is ready!")}
 ${c("green", "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")}
 
 ${c("cyan", "Installed files:")}
@@ -439,10 +439,10 @@ ${c("cyan", "Persona updated:")}
 
 ${c("yellow", "Try saying to your agent:")}
   "Send me a selfie"
-  "Send a pic wearing a cowboy hat"
+  "Send a pic wearing a leather jacket"
   "What are you doing right now?"
 
-${c("dim", "Your agent now has selfie superpowers!")}
+${c("dim", "Your boyfriend now has selfie superpowers!")}
 `);
 }
 
