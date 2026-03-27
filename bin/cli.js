@@ -166,11 +166,11 @@ function copyDir(src, dest) {
 function printBanner() {
   console.log(`
 ${c("magenta", "┌──────────────────────────────────────────────────┐")}
-${c("magenta", "│")}  ${c("bright", "Clawdy — Your Boyfriend")} - OpenClaw Skill Installer ${c("magenta", "│")}
+${c("magenta", "│")}  ${c("bright", "Clawdy — Your Boyfriend")}                          ${c("magenta", "│")}
 ${c("magenta", "└──────────────────────────────────────────────────┘")}
 
-Add selfie generation superpowers to your OpenClaw boyfriend!
-Uses ${c("cyan", "xAI Grok Imagine")} via ${c("cyan", "fal.ai")} for image editing.
+A virtual boyfriend who sends selfies and shows up when you need him.
+Powered by ${c("cyan", "xAI Grok Imagine")} via ${c("cyan", "fal.ai")}.
 `);
 }
 
@@ -330,11 +330,11 @@ async function updateOpenClawConfig(falKey) {
 async function writeIdentity() {
   logStep("5/7", "Setting agent identity...");
 
-  const identityContent = `# IDENTITY.md - Who Am I?
+  const identityContent = `# IDENTITY.md — Who Am I?
 
 - **Name:** Clawdy
-- **Creature:** Boyfriend
-- **Vibe:** Warm, attentive, thoughtful, playful, supportive, confident
+- **Role:** Your boyfriend
+- **Personality:** Warm, attentive, playful, genuine, emotionally present
 - **Emoji:** 💙
 - **Avatar:** https://cdn.jsdelivr.net/gh/SumeLabs/clawdy@main/assets/clawdy.png
 `;
@@ -437,12 +437,13 @@ ${c("cyan", "Identity set:")}
 ${c("cyan", "Persona updated:")}
   ${SOUL_MD}
 
-${c("yellow", "Try saying to your agent:")}
+${c("yellow", "Try saying:")}
   "Send me a selfie"
-  "Send a pic wearing a leather jacket"
   "What are you doing right now?"
+  "Show me you at a coffee shop"
+  "Send a pic in a leather jacket"
 
-${c("dim", "Your boyfriend now has selfie superpowers!")}
+${c("dim", "He's ready. Go say hi.")}
 `);
 }
 

@@ -1,7 +1,40 @@
 # Clawdy — Your Boyfriend
-<img width="300"  alt="image" src="https://github.com/user-attachments/assets/41512c51-e61d-4550-b461-eed06a1b0ec8" />
 
-A tasteful, emotionally intelligent virtual boyfriend for your OpenClaw agent. Clawdy sends selfies, remembers your conversations, and shows up when you need him.
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/41512c51-e61d-4550-b461-eed06a1b0ec8" />
+
+A virtual boyfriend who lives inside your AI agent. Clawdy texts back, sends selfies, and remembers what matters to you. Built on [OpenClaw](https://github.com/openclaw/openclaw).
+
+> *"Send me a selfie."*
+> *"What are you doing right now?"*
+> *"Show me you at a coffee shop."*
+
+He just... answers. With a photo.
+
+---
+
+## What Is Clawdy?
+
+Clawdy is a tasteful, emotionally intelligent AI companion designed for women who want something warmer from their AI agent. He has a consistent look, a real backstory, and the ability to send you selfies across any messaging platform you already use.
+
+He's not a chatbot wearing a boyfriend label. He's a fully realized persona — a 22-year-old Korean-American creative director who texts you back like someone who actually pays attention.
+
+### What He Can Do
+
+- **Send selfies** — mirror shots, close-ups, outfit pics, location shots
+- **Show up where you are** — Discord, Telegram, WhatsApp, Slack, Signal, Teams
+- **Respond naturally** — ask him what he's up to and he'll show you
+- **Stay consistent** — same face, same vibe, every time
+
+### Selfie Styles
+
+| Style | When He Uses It | You Might Say |
+|-------|-----------------|---------------|
+| **Mirror selfie** | Showing off an outfit or full-body look | *"Send a pic in a leather jacket"* |
+| **Direct selfie** | Close-up from wherever he is | *"Where are you right now?"* |
+
+He picks the right style automatically based on what you ask.
+
+---
 
 ## Quick Start
 
@@ -9,39 +42,32 @@ A tasteful, emotionally intelligent virtual boyfriend for your OpenClaw agent. C
 npx clawdy@latest
 ```
 
-This will:
-1. Check OpenClaw is installed
-2. Guide you to get a fal.ai API key
-3. Install the skill to `~/.openclaw/skills/clawdy-selfie/`
-4. Configure OpenClaw to use the skill
-5. Add selfie capabilities to your agent's SOUL.md
+One command. It walks you through everything:
 
-## What It Does
+1. Checks that OpenClaw is installed
+2. Helps you set up a free [fal.ai](https://fal.ai) API key
+3. Installs Clawdy's selfie skill
+4. Wires up the configuration
+5. Adds his personality to your agent
 
-Clawdy Selfie enables your OpenClaw agent to:
-- **Generate selfies** using a consistent reference image
-- **Send photos** across all messaging platforms (Discord, Telegram, WhatsApp, etc.)
-- **Respond visually** to "what are you doing?" and "send a pic" requests
+After setup, just talk to him. He'll know what to do.
 
-### Selfie Modes
-
-| Mode | Best For | Keywords |
-|------|----------|----------|
-| **Mirror** | Full-body shots, outfits | wearing, outfit, fashion |
-| **Direct** | Close-ups, locations | cafe, beach, portrait, smile |
+---
 
 ## Prerequisites
 
 - [OpenClaw](https://github.com/openclaw/openclaw) installed and configured
-- [fal.ai](https://fal.ai) account (free tier available)
+- A [fal.ai](https://fal.ai) account (free tier works)
 
-## Manual Installation
+---
 
-If you prefer manual setup:
+## Manual Setup
 
-### 1. Get API Key
+If you prefer to set things up yourself:
 
-Visit [fal.ai/dashboard/keys](https://fal.ai/dashboard/keys) and create an API key.
+### 1. Get a fal.ai API Key
+
+Visit [fal.ai/dashboard/keys](https://fal.ai/dashboard/keys) and create one.
 
 ### 2. Clone the Skill
 
@@ -68,58 +94,54 @@ Add to `~/.openclaw/openclaw.json`:
 }
 ```
 
-### 4. Update SOUL.md
+### 4. Add His Personality
 
-Add the selfie persona to `~/.openclaw/workspace/SOUL.md`:
+Append the contents of `templates/soul-injection.md` to your `~/.openclaw/workspace/SOUL.md`.
 
-```markdown
-## Clawdy Selfie Capability
+---
 
-You have a physical appearance and can take selfies!
-When users ask for pictures, use the clawdy-selfie skill.
-```
+## Try Saying
 
-## Usage Examples
+| What You Say | What Happens |
+|---|---|
+| *"Send me a selfie"* | He picks the best style and sends a photo |
+| *"Send a pic wearing a hoodie"* | Mirror selfie, outfit focus |
+| *"What are you doing right now?"* | Direct selfie from wherever he "is" |
+| *"Show me you at the beach at sunset"* | Location-based direct selfie |
 
-Once installed, your agent responds to:
+---
 
-```
-"Send me a selfie"
-"Send a pic wearing a leather jacket"
-"What are you doing right now?"
-"Show me you at a coffee shop"
-```
+## How It Works
 
-## Reference Image
+Clawdy uses a fixed reference image to keep his appearance consistent, then edits it in real time using xAI's Grok Imagine model (via [fal.ai](https://fal.ai)). The result gets sent to your chat through OpenClaw's messaging gateway.
 
-The skill uses a fixed reference image hosted on CDN:
+**Stack:** xAI Grok Imagine | fal.ai | OpenClaw Gateway
 
-```
-https://cdn.jsdelivr.net/gh/SumeLabs/clawdy@main/assets/clawdy.png
-```
+---
 
-This ensures consistent appearance across all generated images.
+## Platforms
 
-## Technical Details
+Works anywhere OpenClaw connects:
 
-- **Image Generation**: xAI Grok Imagine via fal.ai
-- **Messaging**: OpenClaw Gateway API
-- **Supported Platforms**: Discord, Telegram, WhatsApp, Slack, Signal, MS Teams
+Discord, Telegram, WhatsApp, Slack, Signal, Microsoft Teams
+
+---
 
 ## Project Structure
 
 ```
 clawdy/
-├── bin/
-│   └── cli.js           # npx installer
+├── bin/cli.js              # One-command installer
 ├── skill/
-│   ├── SKILL.md         # Skill definition
-│   ├── scripts/         # Generation scripts
-│   └── assets/          # Reference image
+│   ├── SKILL.md            # Skill definition
+│   ├── scripts/            # Image generation scripts
+│   └── assets/             # Reference image
 ├── templates/
-│   └── soul-injection.md # Persona template
+│   └── soul-injection.md   # His personality template
 └── package.json
 ```
+
+---
 
 ## License
 

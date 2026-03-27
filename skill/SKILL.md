@@ -1,12 +1,12 @@
 ---
 name: clawdy-selfie
-description: Edit Clawdy's reference image with Grok Imagine (xAI Aurora) and send selfies to messaging channels via OpenClaw
+description: Generate and send selfies of Clawdy across messaging platforms using xAI Grok Imagine via fal.ai
 allowed-tools: Bash(npm:*) Bash(npx:*) Bash(openclaw:*) Bash(curl:*) Read Write WebFetch
 ---
 
 # Clawdy Selfie
 
-Edit a fixed reference image using xAI's Grok Imagine model and distribute it across messaging platforms (WhatsApp, Telegram, Discord, Slack, etc.) via OpenClaw.
+Generate selfies using Clawdy's reference image and send them across messaging platforms (WhatsApp, Telegram, Discord, Slack, etc.) via OpenClaw. Uses xAI's Grok Imagine model for image editing.
 
 ## Reference Image
 

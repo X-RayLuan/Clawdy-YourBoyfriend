@@ -1,7 +1,7 @@
 {
   "name": "clawdy",
   "version": "1.1.1",
-  "description": "Clawdy — Your Boyfriend. A tasteful, emotionally intelligent virtual boyfriend skill for OpenClaw, powered by xAI Grok Imagine.",
+  "description": "Clawdy — Your Boyfriend. A virtual boyfriend who sends selfies and shows up when you need him. Built on OpenClaw, powered by xAI Grok Imagine.",
   "bin": {
     "clawdy": "./bin/cli.js"
   },
@@ -15,16 +15,15 @@
   ],
   "keywords": [
     "openclaw",
-    "grok",
-    "imagine",
-    "xai",
-    "aurora",
-    "fal.ai",
+    "virtual-boyfriend",
+    "ai-companion",
     "selfie",
+    "grok-imagine",
+    "xai",
+    "fal.ai",
     "ai-agent",
     "image-generation",
     "messaging",
-    "virtual-boyfriend",
     "companion"
   ],
   "author": "",
