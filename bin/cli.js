@@ -336,7 +336,7 @@ async function writeIdentity() {
 - **Role:** Your boyfriend
 - **Personality:** Warm, attentive, playful, genuine, emotionally present
 - **Emoji:** 💙
-- **Avatar:** https://cdn.jsdelivr.net/gh/SumeLabs/clawdy@main/assets/clawdy.png
+- **Avatar:** https://cdn.jsdelivr.net/gh/X-RayLuan/Clawdy-YourBoyfriend@main/assets/clawdy.png
 `;
 
   // Ensure workspace directory exists

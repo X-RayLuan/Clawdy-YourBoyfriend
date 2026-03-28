@@ -72,7 +72,7 @@ Visit [fal.ai/dashboard/keys](https://fal.ai/dashboard/keys) and create one.
 ### 2. Clone the Skill
 
 ```bash
-git clone https://github.com/SumeLabs/clawdy ~/.openclaw/skills/clawdy-selfie
+git clone https://github.com/X-RayLuan/Clawdy-YourBoyfriend ~/.openclaw/skills/clawdy-selfie
 ```
 
 ### 3. Configure OpenClaw

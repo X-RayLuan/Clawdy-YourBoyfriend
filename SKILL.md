@@ -13,7 +13,7 @@ Generate selfies using Clawdy's reference image and send them across messaging p
 The skill uses a fixed reference image hosted on jsDelivr CDN:
 
 ```
-https://cdn.jsdelivr.net/gh/SumeLabs/clawdy@main/assets/clawdy.png
+https://cdn.jsdelivr.net/gh/X-RayLuan/Clawdy-YourBoyfriend@main/assets/clawdy.png
 ```
 
 ## When to Use
@@ -90,7 +90,7 @@ a close-up selfie taken by himself at a cozy cafe with warm lighting, direct eye
 Use the fal.ai API to edit the reference image:
 
 ```bash
-REFERENCE_IMAGE="https://cdn.jsdelivr.net/gh/SumeLabs/clawdy@main/assets/clawdy.png"
+REFERENCE_IMAGE="https://cdn.jsdelivr.net/gh/X-RayLuan/Clawdy-YourBoyfriend@main/assets/clawdy.png"
 
 # Mode 1: Mirror Selfie
 PROMPT="make a pic of this person, but <USER_CONTEXT>. the person is taking a mirror selfie"
@@ -163,7 +163,7 @@ if [ -z "$FAL_KEY" ]; then
 fi
 
 # Fixed reference image
-REFERENCE_IMAGE="https://cdn.jsdelivr.net/gh/SumeLabs/clawdy@main/assets/clawdy.png"
+REFERENCE_IMAGE="https://cdn.jsdelivr.net/gh/X-RayLuan/Clawdy-YourBoyfriend@main/assets/clawdy.png"
 
 USER_CONTEXT="$1"
 CHANNEL="$2"
@@ -242,7 +242,7 @@ import { promisify } from "util";
 
 const execAsync = promisify(exec);
 
-const REFERENCE_IMAGE = "https://cdn.jsdelivr.net/gh/SumeLabs/clawdy@main/assets/clawdy.png";
+const REFERENCE_IMAGE = "https://cdn.jsdelivr.net/gh/X-RayLuan/Clawdy-YourBoyfriend@main/assets/clawdy.png";
 
 interface GrokImagineResult {
   images: Array<{

@@ -30,9 +30,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SumeLabs/clawdy"
+    "url": "https://github.com/X-RayLuan/Clawdy-YourBoyfriend.git"
   },
-  "homepage": "https://github.com/SumeLabs/clawdy#readme",
+  "homepage": "https://github.com/X-RayLuan/Clawdy-YourBoyfriend#readme",
   "engines": {
     "node": ">=18.0.0"
   },
