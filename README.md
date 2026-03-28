@@ -1,6 +1,6 @@
 # Clawdy — Your Boyfriend
 
-<img width="300" alt="Clawdy male gym portrait" src="https://raw.githubusercontent.com/X-RayLuan/Clawdy-YourBoyfriend/bf9a893/assets/clawdy.png" />
+<img width="300" alt="Clawdy final reference portrait" src="https://raw.githubusercontent.com/X-RayLuan/Clawdy-YourBoyfriend/6fc8b4e/assets/clawdy.png" />
 
 A virtual boyfriend who lives inside your AI agent. Clawdy texts back, sends selfies, and remembers what matters to you. Built on [OpenClaw](https://github.com/openclaw/openclaw).
 
